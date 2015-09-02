@@ -1,16 +1,10 @@
-
-.color-text {color: #000080;}
 a:link {
   color: #800080;
   font-size: 1em;
 }
+
 a:visited {color: #ff0000;}
-.bg {background-color: #ffffff;}
 
-.debug {border: 1px solid red;}
-
-.fl-l{ float: left; }
-.fl-r{ overflow: hidden;}
 span {
   font-size: .7em;
 }
@@ -27,35 +21,53 @@ li {
   padding: 1em;
 }
 
-.p-m {
-  padding: 1.5em;
-}
-
-.width-l{
-  width: 50%;
-}
-
-.clearfix {
-  clear: both;
-}
-
-.bold {font-weight: bold;}
-.size-h1 {font-size: 1.15em;}
-.size-h2 {font-size: .95em;}
-.size-h3 {font-size: .75em;}
-.size-h4 {font-size: .6em;}
-.size-std {font-size: .7em;}
-
-.t-center {text-align: center;}
+.debug {border: 1px solid red;}
 
 .linebreak {
   background-color: black;
   height: 1px;
 }
 
+/*Element styles*/
+.bg {background-color: #ffffff;}
+.color-text {color: #000080;}
+.bold {font-weight: bold;}
+.size-h1 {font-size: 1.15em;}
+.size-h2 {font-size: .95em;}
+.size-h3 {font-size: .75em;}
+.size-h4 {font-size: .6em;}
 .size-up {font-size: 1.5em;}
+.size-std {font-size: .7em;}
+.width-l{width: 50%;}
+.t-center {text-align: center;}
+
+
+/*Positioning*/
+.fl-l{ float: left; }
+.fl-r{ overflow: hidden;}
+.p-m { padding: 1.5em;}
+.clearfix {clear: both;}
 .pm-top-none {margin-top: 0em;}
 .pm-bot-none {margin-bottom: 0em;}
 .pm-top-med {margin-top: 3em;}
 .pm-l-std {margin-left: 5%;}
 .pm-r-std {margin-right: 5%;}
+
+/*
+- What is important to know when linking an external file (like a stylesheet) to an HTML file?
+The rel and href attributes in the the link tag determines if the stylesheet can be linked up. href is the location of the stylesheet and obviously it needs to be absolutely accurate so the browser can find the stylesheet. Rel is also very important for the browser to know the relationship between the html and the css file. We typed the rel as ref (reference) making the html not able to link with the css file.
+
+- What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+Positioning is very tricky. First we add a lot of div tag to further separate each section, then change their location accordingly. The part where we need to separate the list into 2 columes was the most challenging since it requires a property called overfloat. After some research we were able to accomplish that with some tweeks. Overall the site looks very similar to the actual site.
+
+- What CSS did you use to modify the element style (like size, color, etc.)
+We used size, weight, color and background to modify the text style, and we used text alignment to change the text location. It might have better appearance eventually after we start using the grid. We decided not to change the font-family as we were still not sure if the users' machine will support it.
+
+
+- Did you modify the HTML to include classes or ids? If so, which did you chose and why? If you didn't, how would you know which one to add to your HTML?
+We include classes but not ID in the HTML. Base on the video, it is not recommended to target the element with ID if there is no Javascript included because ID has the highest priority in terms of specifity. We follow the atomic design style to add classes to most of our elements other than a couple styles using pseudo-code and general standard for the type of elements, i.e links and li.
+
+- When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+We think our code's practice is better since we separate the style design from the actual content, whereas the actual site has all the style built-in to the HTML file. Though our practice is the "best" practice. The way we do positioning is through changing the margin for the adjacent elements. If one the those elements had some minor change in the margin, the appearance would be different. We will research for better ways to do positioning.
+
+*/
