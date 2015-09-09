@@ -1,6 +1,6 @@
 #Solution Below
-first_name=Nathan
-last_name=Luo
+first_name="Nathan"
+last_name="Luo"
 age=26
 
 
