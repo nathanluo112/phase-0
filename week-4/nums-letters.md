@@ -39,6 +39,6 @@ Local variable is a very important concept on Object Oriented Language. It allow
 **How was this challenge? Did you get a good review of some of the basics?**
 This is a great review on the most basic ruby concept. Though rspec could be a bit complicated to setup using different methods.
 
-[Basic Math:]./basic-math.rb
-[Defining Variables:]./defining-variables.rb
-[Simple String:]./simple-string.rb
+[Basic Math:](./basic-math.rb)
+[Defining Variables:](./defining-variables.rb)
+[Simple String:](./simple-string.rb)
