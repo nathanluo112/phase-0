@@ -6,5 +6,7 @@ def update(source)
   end
 end
 
+i="string"
+puts "i class = #{i.class}"
 update(num)
 puts num
