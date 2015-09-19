@@ -69,3 +69,16 @@ end
 
 
 # 4. Reflection
+# Which data structure did you and your pair decide to implement and why?
+# We decided to use Hash. Because we need some sort of memory to store the number of occurance but not so much of the sequence the occurance happens.
+# Technically speaking, array would work but a lot more complicated. Hash is perfect for this challenge because we can use elements as the keys.
+# Since keys cannot be duplicated in the Hash, when multiple occurance happens, we can just update the corresponding value.
+
+# Were you more successful breaking this problem down into implementable pseudocode than the last with a pair?
+# Yes, though the sequence is a little bit different. First we explained the big picture: what we need to accomplish the task. Then we broke each step into smaller steps.
+
+# What issues/successes did you run into when translating your pseudocode to code?
+# We forgot to memorize the max_occurance in our pseudo code. When trying to collect the data again from hash, we realize the need for this object.
+
+# What methods did you use to iterate through the content? Did you find any good ones when you were refactoring? Were they difficult to implement?
+# We use .each to iterate through the content. I tried to use collect but it would become too complicated. It was quite easy to implement the iteration.
