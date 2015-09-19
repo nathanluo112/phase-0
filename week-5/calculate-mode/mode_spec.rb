@@ -27,3 +27,4 @@ describe 'mode' do
     expect(mode(array_3)).to eq ["banana", "cherry"]
   end
 end
+
