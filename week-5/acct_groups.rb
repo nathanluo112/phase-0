@@ -6,28 +6,36 @@
 # 4. Use total number of students divide 5 then plus 1 to get total number of groups
 # 5. Iterate the whole name list to assign a random group number to each person, depends on condistion on step three, the group numbers will appear 4 or 5 times.
 
-$name_book = []
-$groups = Hash.new
+$name_book = ["Shunqian Luo (Nathan)", "Kim Allen","Jenna Andersen", "Pamela Antonow", "Jupiter Baudot", "Ovi Calvo", "Awilda Cantres", "Celeste Carter", "Mike Cerrone", "Eunice Choi","Un Choi", "Kristie Chow", "Regina Compton", "Marcus Davis", "Paul Etscheit", "Solomon Fernandez", "Marcel Galang", "Aurelio Garcia", "Hector Jair Moreno Gomez", "Ricky Binhai Hu", "Kai Huang", "Alex Jamar", "Harmin Jeong", "Lauren Jin", "CJ Joulain", "Michael Landon", "Richard Leo", "Julian Lesse", "Ryan Lesson", "Ian Lockwood", "Christopher Mark", "Lauren Markzon", "Miguel Angel Melendez", "David O'Keefe", "Nathan Park", "Landey Patton", "Farman Pirzada", "Samuel Frederick Purcell", "Salim Rahimi", "Colin Razevich", "Irina Renteria", "Jamie Runyan", "Eric Shou", "Michael Silberstein", "Rosslyn Sinclair-Chin", "Aji Slater", "Marvy Tagala", "George Warnbold", "Shawn Watson", "Hana Worku", "Nicholas Yee"]
+$groups = []
 
 def acct_group
   total_students = $name_book.length
+  name_book_duplicate = $name_book.dup
   raise ArgumentError("Total number of students not enough") if (total_students < 8)
   number_of_four = 5 - total_students%5
-  total_group = total_students/5
-  total_group +=1 if number_of_four > 0
-  index = 1
-  assignment_array = []
-  while index <= total_group
+  total_groups = total_students/5
+  total_groups +=1 if number_of_four > 0
+  $groups = Array.new(total_groups){Array.new}
+  index = 0
+
+  while index < total_groups
     if index <= number_of_four
-      4.times {assignment_array << index}
+      $groups[index]<< name_book_duplicate.shuffle!.pop(4)
     else
-      5.times {assignment_array << index}
+      $groups[index]<< name_book_duplicate.shuffle!.pop(5)
     end
     index +=1
   end
+end
 
-  name_book_dup = $name_book.dup
-  while assignment_array.length >0
-    $groups[name_book_dup.shuffle!.pop] = assignemt_array.shuffle!.pop
+def print
+  index = 1
+  $groups.each do |group|
+    puts("Group #{index}: #{group}")
+    index += 1
   end
 end
+
+acct_group
+print
