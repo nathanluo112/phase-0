@@ -27,6 +27,7 @@ def acct_group
     end
     index +=1
   end
+  $groups.shuffle!
 end
 
 def print
@@ -39,3 +40,19 @@ end
 
 acct_group
 print
+
+
+# What was the most interesting and most difficult part of this challenge?
+# The most interesting part is to translate the logic into working functions and methods. The most difficult part is figuring out the logic. As I going through the complexity part and add more behaviors to the method, I get to learn a lot more tricks I have never used before.
+
+# Do you feel you are improving in your ability to write pseudocode and break the problem down?
+# I feel more comfortable writing pseudocode but still need a lot more practice.
+
+# Was your approach for automating this task a good solution? What could have made it even better?
+# Depending on the requirement of "good". I add randomness and try to make the least amount of people in a group to be 4 instead of 3. So each iteration will return different result. Also changing the number of students will not affect the result much, but too few students will cause problem (which might not be the case because the cohort won't need to be divided if there are too few students).
+
+# What data structure did you decide to store the accountability groups in and why?
+# I was using a hash before but eventually changed to array. Using hash allow easier access on each person's information, but harder to output. Array is easier to maintained and output but will take longer time to change the values.
+
+# What did you learn in the process of refactoring your initial solution? Did you learn any new Ruby methods?
+# Yes. I learned how to construct a array of arrays to generate the container. I tried to push names into the $group array's element treating each element as an array, but the default element in the array is in fact nil.
