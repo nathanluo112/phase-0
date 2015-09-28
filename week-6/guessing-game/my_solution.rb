@@ -6,10 +6,14 @@
 
 # Pseudocode
 
-# Input:
-# Output:
+# Input: Integer
+# Output: True or False
 # Steps:
-
+# 1. Check if the input is a valid number, set as answer if it is.
+# 2. guess will return low if guess is lower than answer
+#    return high if higher than answer
+#    correct if the guess is the answer
+# 3. Depends on the result of the guess, determine if the problem is solved.
 
 # Initial Solution
 
