@@ -178,6 +178,7 @@ var runGame = function(num){
       mainChar.speed = speedToken.speed;
       speedToken.location = [Math.floor(Math.random()*boardSize), Math.floor(Math.random()*boardSize)];
       speedToken.speed = speeds[Math.floor(Math.random()*2)];
+      confirm("Continue?");
     }
 
     mainChar.printLocation();
