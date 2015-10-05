@@ -1,69 +1,65 @@
- // JavaScript Olympics
+// PERSON NUMBER 4 //////////////////////////////////////////////////////
 
-// I paired [with: Alison] on this challenge.
+// Sum function
+var sum = 0
 
-// This challenge took me [.5] hours.
-
-
-// Bulk Up
-var array = [
-  {name: "Sarah", event: "Single"},
-  {name: "Mike", event: "Double"}
-   ];
-
-var win = function (){
-  console.log(this.name + " win the "+ this.event);
-}
-
-for (var i = 0; i < array.length; i++){
-  array[i].win = win;
-  array[i].win();
-}
+function combine(numbers){
+  for (var index in numbers){
+    sum=numbers[index] +sum
+  };
+  return sum
+};
 
 
-// Jumble your words
-var string1 = "abc";
+//Mean Function//
+function mean(numbers){
+   var mean= combine(numbers);
+   return mean/ numbers.length;
+};
 
-function reverser(string){
-  var arrayString = string.split('');
-  return arrayString.reverse().join('');
+//Median Function
+// This is where variable x was renamed and Math.floor was refactored, as well as 2 comments to make action slightly more explicit
+function median(numbers){
 
-}
-console.log(reverser(string1));
+  var sorter= numbers.sort(function (a,b){return a-b});
+  if (sorter.length %2===1){ //if odd
+    var median= Math.floor(sorter.length/2);
+    return(sorter[median]);}
 
+  else if(sorter.length % 2 ===0) // if even
+    {var median=sorter.length/2;
+    return (sorter[median] +sorter[median-1])/2}
 
-// 2,4,6,8
-var nums = [1,2,3,4,5,6,7,8];
+  else
+    return "Please enter an array of integers";
 
-function isEven(num){
-  return num%2 == 0;
-}
-
-var even = nums.filter(isEven);
-console.log(even);
-
-
-
-// "We built this city"
-function Athlete(name, age, sport, quote){
-  this.name = name;
-  this.age = age;
-  this.sport = sport;
-  this.quote = quote;
-}
+};
 
 
-var michaelPhelps = new Athlete("Michael Phelps", 29, "swimming", "It's medicinal I swear!")
-console.log(michaelPhelps.constructor === Athlete)
-console.log(michaelPhelps.name + " " + michaelPhelps.sport + " " + michaelPhelps.quote)
+console.log(combine([3,4,2,1,6,8,9,10,11]))
+console.log(mean([3,4,2,1,6,8,9,10,11]))
+console.log(median([3,4,2,1,6,8,9,10,11]))
 
-// Reflection
-// What JavaScript knowledge did you solidify in this challenge?
-// Function stored in a variable is a very interesting concept. I had some trouble understanding that. After the first release I have a much better understanding of why it use "this" and how "this" is linked to the object.
+// User Stories
 
-// What are constructor functions?
-// Constructor functions are constomized function similar to "Object()", which takes more arguments for initializing the object's properties.
+// As a user, I need to be perform the following operations on sets of numbers:
+//(a) I need to be able to sum large amounts of numbers
+//(b) I need to calculate the average of a list of numbers
+//(c) I need to be able to find the median of a set of numbers.
 
-// How are constructors different from Ruby classes (in your research)?
-// The constructor functions are not tied to a "class" in JavaScript because there is no "class" in JavaScript, only objects. Though the behavior is very similar to class.
-//If we treat an object with certain kinds of properties as a class, then they can be changed to other "classes" by modifying the object's properties.
+
+
+// And if you want it in a more roleplaying/real-world type fashion:
+// As a teacher, I need a program to calculate number grades for 3 tasks:
+// (1) I need to sum one student's number grades for the semester
+// (2) Calculate the class average
+// (3) Select a median number grade
+
+
+
+
+
+
+//////////////////////////////////////////////End of Person Four's Work////
+
+
