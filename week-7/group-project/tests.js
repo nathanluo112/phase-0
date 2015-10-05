@@ -1,21 +1,24 @@
 
 // Add the finished solution here when you receive it.
-// Sum function
-var sum = 0
+// PERSON NUMBER 4
 
-function combine(numbers){
+// Sum function
+
+
+function sum(numbers){
+  var total = 0;
   for (var index in numbers){
-    sum=numbers[index] +sum
+    total=numbers[index] +total
   };
-  return sum
-}
+  return total
+};
 
 
 //Mean Function//
 function mean(numbers){
-   var mean= combine(numbers);
-   return mean/ numbers.length;
-}
+   var m_num = sum(numbers);
+   return m_num / numbers.length;
+};
 
 //Median Function
 // This is where variable x was renamed and Math.floor was refactored, as well as 2 comments to make action slightly more explicit
@@ -33,7 +36,10 @@ function median(numbers){
   else
     return "Please enter an array of integers";
 
-}
+};
+
+
+
 // __________________________________________
 // Tests:  Do not alter code below this line.
 
