@@ -13,8 +13,12 @@
 
 // Nice job on the median!
 
-// Sum function
+// So far the group has been doing a decent job on the work flow. We simulate the scenario and has found out about the problems that can happen in each step and each iteration.
+// Eventually if we goes through the process a couple more times, it would be more accurate. For example, person 1 will have a clearer (more detailed) description of the story, so person 2 will have more accurate pseudocode for person 3 and 4 to translate to actual code.
+// We need more practice to get use to this work flow.
 
+// ---------------- Code -----------------------
+// Sum function
 
 function sum(numbers){
   var total = 0;
