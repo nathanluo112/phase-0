@@ -1,18 +1,29 @@
 **Exercises**
+
 1. sqlite> SELECT * FROM states;
+
 2. sqlite> SELECT * FROM regions;
+
 3. sqlite> SELECT state_name, population FROM states;
+
 4. sqlite> SELECT state_name, population FROM states ORDER BY population DESC;
+
 5. sqlite> SELECT state_name FROM states WHERE region_id = 7;
+
 6. sqlite> SELECT state_name, population_density FROM states WHERE population_density > 50 ORDER BY population_density ASC;
+
 7. sqlite> SELECT state_name FROM states WHERE population BETWEEN 1000000 and 1500000;
+
 8. sqlite> SELECT state_name, region_id FROM states ORDER BY region_id ASC;
+
 9. sqlite> SELECT region_name FROM regions WHERE region_name LIKE '%Central%';
+
 10. sqlite> SELECT regions.region_name, states.state_name FROM regions
    ...> LEFT JOIN states WHERE regions.id = states.region_id
    ...> ORDER BY regions.id;
 
 Screen Shot for sample linked tables:
+
 ![Linked Tables](./database_ss.png)
 
 **What are databases for?**
