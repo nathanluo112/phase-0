@@ -31,4 +31,4 @@ Many-to-many database:
 
 Grocery-item schema:
 
-![grocery-item](schema_grocery_item.png)
+![grocery-item](imgs/schema_grocery_item.png)
